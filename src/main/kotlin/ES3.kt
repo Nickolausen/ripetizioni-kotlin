@@ -56,7 +56,7 @@ class Data(
 
         val lowerBound: Int = 1
         val upperBound: Int = upperBounds[_mese - 1]
-        check(_giorno !in lowerBound..upperBound) { "'giorno' deve essere compreso tra $lowerBound e $upperBound!" }
+        check(_giorno in lowerBound..upperBound) { "'giorno' deve essere compreso tra $lowerBound e $upperBound!" }
 
         this.giorno = _giorno
     }
