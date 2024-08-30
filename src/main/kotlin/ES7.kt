@@ -23,7 +23,7 @@ class Gioco()
 {
     private val punteggioSettimane: Array<Int?> = arrayOfNulls(52)
 
-    /*● memorizzare il risultato ottenuto in una certa partita giocata in una certa settimana*/
+    /* ● memorizzare il risultato ottenuto in una certa partita giocata in una certa settimana */
     fun inserisciPunteggio(score: Int, settimana: Int)
     {
         /* Controllo la validità del numero della settimana */
@@ -69,12 +69,14 @@ class Gioco()
     {
         var output: Int = 0
         var somma: Int = 0
+        var i: Int = 0
 
-        for (score in punteggioSettimane)
+        while (i < punteggioSettimane.size && somma <= 100)
         {
-            somma += score!!
+            somma += punteggioSettimane[i]!!
+            output++
 
-            if (somma <= 100) output++
+            i++
         }
 
         return output

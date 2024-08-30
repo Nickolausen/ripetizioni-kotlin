@@ -15,14 +15,17 @@ class Persona(
     val mm: Int, /* Mese di nascita */
     val yyyy: Int) /* Anno di nascita */
 {
-    var eta: Int = calcolaEta()
+    val eta: Int
+        get() {
+            return calcolaEta()
+        }
 
     private fun calcolaEta(): Int
     {
         var output: Int
 
         /* Ottengo la data odierna */
-        val oggiDd: Int = 20
+        val oggiDd: Int = 23
         val oggiMm: Int = 7
         val oggiYyyy: Int = 2024
 
@@ -52,7 +55,7 @@ class Persona(
 /* Funzione ausiliaria - non richiesta dalla consegna */
 fun getConfronto(result: Int): String
 {
-    var output: String = "coetaneo";
+    var output: String = "coetaneo"
     if (result == 1)
         output = "più adulto"
     else if (result == -1)
@@ -63,6 +66,7 @@ fun getConfronto(result: Int): String
 
 fun main()
 {
+    /* -- PRENDIAMO IN CONSIDERAZIONE LA DATA '23/07/2024' COME DATA ODIERNA -- */
     /* Persona che ha già compiuto gli anni nell'anno corrente (2024) */
     val p1 = Persona("Nicholas", "Magi", 1,6,2004)
 
@@ -76,7 +80,7 @@ fun main()
     println("Età: " + p2.eta) /* Expected output: 19 */
     println("Età: " + p3.eta) /* Expected output: 18 */
 
-    println(p1.nome + " è " + getConfronto(p1.confronto((p2))) + " di " + p2.nome)
-    println(p2.nome + " è " + getConfronto(p2.confronto((p1))) + " di " + p1.nome)
-    println(p2.nome + " è " + getConfronto(p2.confronto((p3))) + " di " + p3.nome)
+    println(p1.nome + " è " + getConfronto(p1.confronto(p2)) + " di " + p2.nome)
+    println(p2.nome + " è " + getConfronto(p2.confronto(p1)) + " di " + p1.nome)
+    println(p2.nome + " è " + getConfronto(p2.confronto(p3)) + " di " + p3.nome)
 }

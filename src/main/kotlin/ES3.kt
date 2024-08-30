@@ -26,7 +26,7 @@ class Data(
 
         /*
             Gennaio = upperBounds[0] = 31gg
-            Febbraio = upperBounds[1] = 28gg
+            Febbraio = upperBounds[1] = 29 se ANNO BISESTILE, 28 ALTRIMENTI
             Marzo = upperBounds[2] = 31gg
             Aprile = upperBounds[3] = 30gg
             Maggio = upperBounds[4] = 31gg
@@ -37,7 +37,7 @@ class Data(
             Ottobre = upperBounds[9] = 31gg
             Novembre = upperBounds[10] = 30gg
             Dicembre = upperBounds[11] = 31gg
-         */
+        */
 
         val giorniFebbraio: Int = if (isBisestile()) 29 else 28
         val upperBounds: Array<Int> = arrayOf(
@@ -56,7 +56,7 @@ class Data(
 
         val lowerBound: Int = 1
         val upperBound: Int = upperBounds[_mese - 1]
-        check(_giorno !in lowerBound..upperBound) { "'giorno' deve essere compreso tra $lowerBound e $upperBound!" }
+        check(_giorno in lowerBound..upperBound) { "'giorno' deve essere compreso tra $lowerBound e $upperBound!" }
 
         this.giorno = _giorno
     }

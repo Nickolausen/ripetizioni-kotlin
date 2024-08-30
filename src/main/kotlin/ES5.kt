@@ -18,12 +18,22 @@ class Studente(
     val cognome: String
     val voti: Array<Int>
 
+    /* Aggiuntivo: proprietà 'media' */
+    var media: Double = 0.0
+        get() {
+            var sum: Int = 0
+            for (voto in voti)
+                sum += voto
+            return (sum / voti.size).toDouble()
+        }
+        private set
+
     init {
-        check(_nome != "") { "Un nome non può essere vuoto!" }
-        check(_cognome != "") { "Un cognome non può essere vuoto!" }
+        require(_nome != "") { "Un nome non può essere vuoto!" }
+        require(_cognome != "") { "Un cognome non può essere vuoto!" }
 
         for (voto in _voti)
-            check(voto in 1..10) {"Un voto deve essere compreso tra 1 e 10!"}
+            require(voto in 1..10) {"Un voto deve essere compreso tra 1 e 10!"}
 
         this.nome = _nome
         this.cognome = _cognome
@@ -59,4 +69,24 @@ class Studente(
         /* Altrimenti lo studente aveva 0 insufficienze e, di conseguenza, 0 punti mancanti alla sufficienza */
         return "Promosso"
     }
+
+    /* Aggiuntiva */
+    fun printStatus()
+    {
+        println("== Studente ${this.nome} ${this.cognome} ==")
+        println("> Media ${this.media} - Esito: ${this.esitoFinale()}")
+        print("> Voti finali: ")
+        for (voto in this.voti)
+            print("${voto} ")
+        println()
+    }
+}
+
+fun main()
+{
+    val s1 = Studente("Nicholas", "Magi", arrayOf(8,9,3,1,10,5))
+    val s2 = Studente("Alex", "Burioli", arrayOf(10,5,7,2,8,10,4,4,2,9))
+
+    s1.printStatus()
+    s2.printStatus()
 }
