@@ -5,21 +5,18 @@ package org.example
 class Soluzioni()
 {
     /* Scrivere un algoritmo che, date le età di n persone, calcoli l’età media. */
-    fun Esercizio1(eta: Array<Int>): Double
-    {
+    fun Esercizio1(eta: Array<Int>): Double {
         return eta.average()
     }
 
     /* Scrivere un algoritmo che, dato il prezzo di un prodotto, calcoli il prezzo scontato del 20%. */
-    fun Esercizio2(prezzo: Double): Double
-    {
+    fun Esercizio2(prezzo: Double): Double {
         /* sconto del 20% */
         return prezzo * 0.8
     }
 
     /* Scrivere un algoritmo che, lette le coordinate di due punti del piano, calcoli la distanza tra essi. */
-    fun Esercizio3(x1: Double, y1: Double, x2: Double, y2: Double): Double
-    {
+    fun Esercizio3(x1: Double, y1: Double, x2: Double, y2: Double): Double {
         val dx: Double = x1 - x2
         val dy: Double = y1 - y2
 
@@ -27,8 +24,7 @@ class Soluzioni()
     }
 
     /* Scrivere un algoritmo che, dato il prezzo di un prodotto, applichi uno sconto del 12% se il prezzo è inferiore a € 30,00, del 25% altrimenti. */
-    fun Esercizio4(prezzo: Double): Double
-    {
+    fun Esercizio4(prezzo: Double): Double {
         require(prezzo > 0.0)
 
         /* Sconto del 12% */
@@ -44,8 +40,7 @@ class Soluzioni()
     per tutti gli altri 15 euro (opzione 4).
     Creare un programma in cui l’utente inserisce un numero tra 1 e 4 e viene comunicato il prezzo relativo all'opzione scelta.
     Se il numero non è un'opzione valida viene mostrato un messaggio di errore.*/
-    fun Esercizio7(opzione: Int): Int
-    {
+    fun Esercizio7(opzione: Int): Int {
         require(opzione in 1..4) { "Opzione must be between 1 and 4" }
 
         when (opzione)
@@ -59,8 +54,7 @@ class Soluzioni()
     }
 
     /* Scrivere un algoritmo che visualizza in ordine decrescente tutti i numeri naturali compresi tra due numeri scelti dall'utente (estremi inclusi). */
-    fun Esercizio8(lowerBound: Int, upperBound: Int): String
-    {
+    fun Esercizio8(lowerBound: Int, upperBound: Int): String {
         require(lowerBound < upperBound) { "Upper bound must be greater than lower bound" }
 
         val sb: StringBuilder = StringBuilder()
@@ -70,12 +64,11 @@ class Soluzioni()
             sb.append("$num ")
         }
 
-        return sb.toString()
+        return sb.toString().trimEnd()
     }
 
     /* Scrivere un algoritmo che, preso in input il valore N>0, calcoli la somma dei primi N numeri positivi pari. */
-    fun Esercizio9(N: Int): Int
-    {
+    fun Esercizio9(N: Int): Int {
         require(N > 0) { "N must be greater than 0" }
 
         var sum: Int = 0
@@ -86,20 +79,18 @@ class Soluzioni()
     }
 
     /* Scrivere un algoritmo che, presi in input due numeri interi N ed X (con N>0), visualizzi gli N numeri interi successivi ad X.  */
-    fun Esercizio10(N: Int, X: Int): String
-    {
+    fun Esercizio10(N: Int, X: Int): String {
         require(N > 0) { "N must be greater than 0" }
 
         val sb: StringBuilder = StringBuilder()
         for (num: Int in X..X + N)
             sb.append("$num ")
 
-        return sb.toString()
+        return sb.toString().trimEnd()
     }
 
     /* Dati quantità e prezzo unitario di N tipologie di prodotti venduti, calcolare l’incasso totale e il numero totale di prodotti prelevati dal magazzino. */
-    fun Esercizio12(prezzi: Array<Double>, qtas: Array<Int>): String
-    {
+    fun Esercizio12(prezzi: Array<Double>, qtas: Array<Int>): String {
         require(prezzi.size == qtas.size) {"Inconsistent number of values!"}
 
         for (prezzo in prezzi)
@@ -111,8 +102,7 @@ class Soluzioni()
         val sb: StringBuilder = StringBuilder()
         var incassoTot: Double = 0.0
 
-        for (i: Int in 0 until qtas.size)
-        {
+        for (i: Int in 0 until qtas.size) {
             incassoTot += prezzi[i] * qtas[i]
         }
 
