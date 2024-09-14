@@ -1,7 +1,8 @@
 package org.example
 
-// TESTO ESERCIZI: https://docs.google.com/document/d/1mEwATKgGadPUb8JpO1svB_Zab4s2xV7KnnPc9e0nPvc/edit?usp=sharing
+// TESTO ESERCIZI (no OOP): https://docs.google.com/document/d/1mEwATKgGadPUb8JpO1svB_Zab4s2xV7KnnPc9e0nPvc/edit?usp=sharing
 // TODO: realizzare Test per ogni funzione
+// N.B.: Non tutti gli esercizi sono stati realizzati - alcuni sono dei doppioni di esercizi già svolti in precedenza
 class Soluzioni()
 {
     /* Scrivere un algoritmo che, date le età di n persone, calcoli l’età media. */
@@ -99,14 +100,12 @@ class Soluzioni()
         for (qta in qtas)
             require(qta > 0) { "Qta must be positive - not $qta" }
 
-        val sb: StringBuilder = StringBuilder()
         var incassoTot: Double = 0.0
 
         for (i: Int in 0 until qtas.size) {
             incassoTot += prezzi[i] * qtas[i]
         }
 
-        sb.append("€$incassoTot ${qtas.sum()}")
-        return sb.toString()
+        return "€$incassoTot ${qtas.sum()}"
     }
 }
