@@ -44,13 +44,13 @@ class Soluzioni()
     fun Esercizio7(opzione: Int): Int {
         require(opzione in 1..4) { "Opzione must be between 1 and 4" }
 
-        when (opzione)
+        return when (opzione)
         {
-            1 -> return 0
-            2 -> return 8
-            3 -> return 10
-            4 -> return 15
-            else -> return -1
+            1 -> 0
+            2 -> 8
+            3 -> 10
+            4 -> 15
+            else -> -1
         }
     }
 
