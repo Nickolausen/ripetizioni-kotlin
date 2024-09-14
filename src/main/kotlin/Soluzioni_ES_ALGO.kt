@@ -2,7 +2,7 @@ package org.example
 
 // TESTO ESERCIZI (no OOP): https://docs.google.com/document/d/1mEwATKgGadPUb8JpO1svB_Zab4s2xV7KnnPc9e0nPvc/edit?usp=sharing
 // TODO: realizzare Test per ogni funzione
-// N.B.: Non tutti gli esercizi sono stati realizzati - alcuni sono dei doppioni di esercizi già svolti in precedenza
+// N.B.: Non tutti gli esercizi sono stati implementati - alcuni sono dei doppioni di esercizi già svolti in precedenza
 class Soluzioni()
 {
     /* Scrivere un algoritmo che, date le età di n persone, calcoli l’età media. */
