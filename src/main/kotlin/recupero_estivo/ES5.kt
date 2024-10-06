@@ -7,7 +7,7 @@
 * punti mancanti alla sufficienza è inferiore o uguale a 5 si è sospesi, altrimenti si è non ammessi
 * */
 
-package org.example
+package org.example.recupero_estivo
 
 class Studente(
     _nome: String,

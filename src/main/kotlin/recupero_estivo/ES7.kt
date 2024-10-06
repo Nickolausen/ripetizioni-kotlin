@@ -17,7 +17,7 @@
     ● calcolare quante partite ha impiegato per raggiungere 100 punti
 * */
 
-package org.example
+package org.example.recupero_estivo
 
 class Gioco()
 {

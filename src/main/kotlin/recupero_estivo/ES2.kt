@@ -4,7 +4,7 @@
 * di una certa percentuale passata come parametro
 * */
 
-package org.example
+package org.example.recupero_estivo
 
 /* Inseriamo i parametri che caratterizzano le proprietà della classe 'Prodotto' nel costruttore di primo livello */
 class Prodotto(

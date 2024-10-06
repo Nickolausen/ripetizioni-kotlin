@@ -1,4 +1,4 @@
-import org.example.Studente
+import org.example.recupero_estivo.Studente
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.*
 import org.junit.jupiter.api.Assertions.*

@@ -4,7 +4,7 @@
  * Scrivere inoltre una fun che restituisce true se la data è di un anno bisestile, false altrimenti
  * */
 
-package org.example
+package org.example.recupero_estivo
 
 class Data(
     _giorno: Int,

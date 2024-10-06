@@ -6,11 +6,17 @@ class Soluzioni()
 {
     /* Scrivere un algoritmo che, date le età di n persone, calcoli l’età media. */
     fun Esercizio1(eta: Array<Int>): Double {
+        for (num: Int in eta) {
+            require(num >= 0)
+        }
+
         return eta.average()
     }
 
     /* Scrivere un algoritmo che, dato il prezzo di un prodotto, calcoli il prezzo scontato del 20%. */
     fun Esercizio2(prezzo: Double): Double {
+        require(prezzo >= 0.0);
+
         /* sconto del 20% */
         return prezzo * 0.8
     }

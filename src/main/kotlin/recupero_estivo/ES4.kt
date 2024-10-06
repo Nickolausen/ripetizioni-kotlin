@@ -5,7 +5,7 @@
 *   eccesso.
 */
 
-package org.example
+package org.example.recupero_estivo
 
 class Bolletta(_consumoUtente: Double)
 {

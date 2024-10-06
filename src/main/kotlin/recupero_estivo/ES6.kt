@@ -9,7 +9,7 @@
     ● restituire l'ingrediente con il peso minore
 * */
 
-package org.example
+package org.example.recupero_estivo
 
 class Ingrediente(val nome: String, val peso: Double)
 

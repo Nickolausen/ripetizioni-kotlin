@@ -1,4 +1,4 @@
-import org.example.Bolletta
+import org.example.recupero_estivo.Bolletta
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.*

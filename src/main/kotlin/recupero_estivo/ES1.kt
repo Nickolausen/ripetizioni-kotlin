@@ -6,7 +6,7 @@
 * come parametro risulta più adulta, 1 se risulta più giovane.
 * */
 
-package org.example
+package org.example.recupero_estivo
 
 class Persona(
     val nome: String,
